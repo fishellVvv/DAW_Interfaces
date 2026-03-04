@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+:root {
+  --font-primary: Arial, Helvetica, sans-serif;
+  --font-secondary: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+
+  --bg: #0f1428;
+  --text: #eee;
+  --text-muted: #555;
+  --accent: #ba2859;
+  --link: #555;
+  --link-hover: #777;
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  height: 100%;
+
+  color: var(--text);
+  background-color: var(--bg);
+  font-family: var(--font-primary);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 0.25rem 3rem;
+
+  background-color: var(--bg);
+}
+
+header #head-logo {
+  display: flex;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+header strong {
+  color: var(--text);
+}
+
+header a span {
+  color: var(--accent);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 100%;
+  padding: 2rem 4rem;
+  margin-top: 4rem;
+  gap: 2rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 0.25rem 3rem;
+  gap: auto;
+
+  background-color: var(--bg);
+}
+
+footer p {
+  color: var(--text-muted);
+  font-size: -25rem;
+}
+
+footer nav ul {
+  display: flex;
+  gap: 0.5rem;
+}
