@@ -1,0 +1,404 @@
+/* =============== */
+/* TechVibe Landing */
+/* =============== */
+
+:root {
+  --bg: #0b1020;
+  --bg-2: #0a1b3a;
+  --panel: #ffffff;
+  --muted: #6b7280;
+  --text: #0f172a;
+
+  --hero-text: #eaf1ff;
+  --hero-muted: rgba(234, 241, 255, 0.75);
+
+  --accent: #e03165;
+  --accent-2: #ff4d7d;
+
+  --line: #e5e7eb;
+
+  --radius: 14px;
+  --shadow: 0 10px 25px rgba(2, 6, 23, 0.15);
+
+  --container: 1080px;
+}
+
+/* Reset básico */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  color: var(--text);
+  background: #f3f4f6;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin: 0.75rem 0;
+}
+
+/* Contenedor global */
+header > nav,
+main > section,
+footer {
+  padding-inline: 1.25rem;
+}
+
+header > nav,
+main > section > *:where(div, form),
+footer > * {
+  max-width: var(--container);
+  margin-inline: auto;
+}
+
+/* ========== */
+/* Navbar */
+/* ========== */
+header {
+  background: linear-gradient(
+    180deg,
+    rgba(11, 16, 32, 0.95),
+    rgba(11, 16, 32, 0.2)
+  );
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(10px);
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1rem;
+}
+
+header nav > a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+header nav > a strong {
+  color: #ffffff;
+}
+
+header nav > a span {
+  color: var(--accent-2);
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul a {
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+header nav ul a:hover {
+  color: #ffffff;
+}
+
+/* ========== */
+/* Hero */
+/* ========== */
+main > section:first-of-type {
+  background:
+    radial-gradient(
+      1200px 600px at 50% 0%,
+      rgba(255, 77, 125, 0.18),
+      transparent 60%
+    ),
+    linear-gradient(180deg, #0b1020 0%, #0a1b3a 100%);
+  padding-block: 4.25rem 3.5rem;
+  text-align: center;
+}
+
+main > section:first-of-type h1 {
+  margin: 0 auto 0.75rem;
+  max-width: 26ch;
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  color: var(--hero-text);
+}
+
+main > section:first-of-type p {
+  max-width: 56ch;
+  margin-inline: auto;
+  color: var(--hero-muted);
+  font-size: 1.03rem;
+}
+
+main > section:first-of-type p:last-child {
+  margin-top: 1.75rem;
+}
+
+main > section:first-of-type a[href="#contacto"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.75rem 1.35rem;
+  border-radius: 12px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #fff;
+  font-weight: 800;
+  box-shadow: 0 12px 30px rgba(224, 49, 101, 0.35);
+  transform: translateY(0);
+  transition:
+    transform 0.15s ease,
+    filter 0.15s ease;
+}
+
+main > section:first-of-type a[href="#contacto"]:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+/* ========== */
+/* Sección Servicios */
+/* ========== */
+#servicios {
+  background: #ffffff;
+  padding-block: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#servicios h2 {
+  margin: 0 0 1.75rem;
+  text-align: center;
+  font-size: 1.25rem;
+  letter-spacing: -0.2px;
+  color: #111827;
+}
+
+#servicios > div {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+#servicios article {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: 0 4px 14px rgba(2, 6, 23, 0.05);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+  text-align: center;
+}
+
+#servicios article:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(2, 6, 23, 0.08);
+}
+
+#servicios article header h3 {
+  margin: 0.75rem 0 0.35rem;
+  font-size: 1.05rem;
+  color: #0f172a;
+}
+
+/* icon placeholder (sin tocar HTML: lo generamos con pseudo) */
+#servicios article header::before {
+  content: "";
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(
+    180deg,
+    rgba(224, 49, 101, 0.15),
+    rgba(10, 27, 58, 0.05)
+  );
+  border: 1px solid rgba(224, 49, 101, 0.2);
+  margin-bottom: 0.6rem;
+}
+
+#servicios article p {
+  margin: 0.5rem 0 0;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* ========== */
+/* Nosotros / Por qué elegirnos */
+/* ========== */
+#nosotros {
+  background: #f3f4f6;
+  padding-block: 3.25rem;
+}
+
+#nosotros {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+#nosotros h2 {
+  margin: 0 0 0.8rem;
+  font-size: 1.3rem;
+  color: #111827;
+}
+
+#nosotros p {
+  color: #6b7280;
+  max-width: 60ch;
+}
+
+#nosotros > div[aria-label] {
+  display: grid;
+  place-items: center;
+}
+
+#nosotros figure {
+  width: 100%;
+  min-height: 220px;
+  border-radius: var(--radius);
+  background:
+    radial-gradient(
+      800px 300px at 40% 30%,
+      rgba(224, 49, 101, 0.22),
+      transparent 55%
+    ),
+    linear-gradient(135deg, #0b1020, #0a1b3a);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+}
+
+/* “brillito” tipo mockup */
+#nosotros figure::after {
+  content: "";
+  position: absolute;
+  inset: -30%;
+  background: linear-gradient(
+    120deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.14) 50%,
+    transparent 60%
+  );
+  transform: rotate(18deg);
+}
+
+#nosotros img {
+  /* si dejas src vacío, la imagen no se verá. El figure ya actúa de placeholder */
+  display: none;
+}
+
+#nosotros figcaption {
+  display: none;
+}
+
+/* ========== */
+/* CTA final + Form */
+/* ========== */
+#contacto {
+  background: linear-gradient(180deg, #0b1020 0%, #070b16 100%);
+  padding-block: 3.25rem;
+  text-align: center;
+}
+
+#contacto h2 {
+  margin: 0 0 0.6rem;
+  color: #ffffff;
+  font-size: 1.35rem;
+  letter-spacing: -0.2px;
+}
+
+#contacto p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ========== */
+/* Footer */
+/* ========== */
+footer {
+  background: #070b16;
+  color: rgba(255, 255, 255, 0.65);
+  padding-block: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+footer nav a {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+footer nav a:hover {
+  color: #ffffff;
+}
+
+/* ========== */
+/* Responsive */
+/* ========== */
+@media (max-width: 900px) {
+  #servicios > div {
+    grid-template-columns: 1fr;
+  }
+
+  #nosotros {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  footer nav ul {
+    justify-content: flex-start;
+  }
+}
