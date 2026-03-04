@@ -10,12 +10,14 @@
   --font-primary: Arial, Helvetica, sans-serif;
   --font-secondary: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 
-  --bg: #0f1428;
+  --bg: #0c1020;
+  --bg-2: #11162d;
+  --bg-3: #1b2651;
   --text: #eee;
-  --text-muted: #555;
-  --accent: #ba2859;
-  --link: #555;
-  --link-hover: #777;
+  --text-muted: #aaa;
+  --accent: #d5425d;
+  --link: #666;
+  --link-hover: #888;
 }
 
 html,
@@ -34,8 +36,8 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 h2 {
@@ -46,6 +48,13 @@ h2 {
 h3 {
   font-size: 1.25rem;
   font-weight: 300;
+}
+
+p {
+  font-size: 0.75rem;
+  font-weight: 200;
+
+  color: var(--text-muted);
 }
 
 li {
@@ -65,9 +74,15 @@ a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.375rem;
   text-decoration: none;
+
+  font-size: 0.825rem;
+  font-weight: 600;
+
+  background-color: var(--accent);
+  color: var(--text);
 }
 
 header {
@@ -79,7 +94,7 @@ header {
   top: 0;
   z-index: 100;
   width: 100%;
-  padding: 0.25rem 3rem;
+  padding: 0.5rem 3rem;
 
   background-color: var(--bg);
 }
@@ -98,16 +113,42 @@ header a span {
   color: var(--accent);
 }
 
+header nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 
+  margin-top: 3rem;
+}
+
+main section {
   width: 100%;
-  padding: 2rem 4rem;
-  margin-top: 4rem;
-  gap: 2rem;
+  padding: 2rem 5rem;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, var(--bg), var(--bg-3));
+}
+
+#servicios {
+  background-color: var(--text);
+}
+
+#nosotros {
+  background-color: var(--text-muted);
+}
+
+#contacto {
+  background-color: var(--bg-2);
 }
 
 footer {
@@ -119,15 +160,15 @@ footer {
   bottom: 0;
   z-index: 100;
   width: 100%;
-  padding: 0.25rem 3rem;
+  padding: 1rem 3rem;
   gap: auto;
 
   background-color: var(--bg);
+  font-size: 0.75rem;
 }
 
 footer p {
   color: var(--text-muted);
-  font-size: -25rem;
 }
 
 footer nav ul {
